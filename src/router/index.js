@@ -7,17 +7,17 @@ const router = createRouter({
 		{
 			path: '/login',
 			name: 'Login',
-			component: () => import('../views/LoginView/index.vue')
+			component: () => import('../views/LoginView/index.js')
 		},
 		{
 			path: '/cadastro',
 			name: 'Cadastro',
-			component: () => import('../views/RegisterView/index.vue')
+			component: () => import('../views/RegisterView/index.js')
 		},
 		{
 			path: '/',
 			name: 'Home',
-			component: () => import('../views/HomeView/index.vue'),
+			component: () => import('../views/HomeView/index.js'),
 			meta: {
 				middleware: AuthMiddleware,
 			}
@@ -25,7 +25,7 @@ const router = createRouter({
 		{
 			path: '/disciplinas',
 			name: 'GradeCurricular',
-			component: () => import('../views/CurriculumView/index.vue'),
+			component: () => import('../views/CurriculumView/index.js'),
 			meta: {
 				middleware: AuthMiddleware,
 			}
@@ -33,7 +33,7 @@ const router = createRouter({
 		{
 			path: '/disciplina/:id',
 			name: 'Disciplina',
-			component: () => import('../views/SubjectView/index.vue'),
+			component: () => import('../views/SubjectView/index.js'),
 			meta: {
 				reload: true,
 				middleware: AuthMiddleware,
@@ -42,7 +42,7 @@ const router = createRouter({
 		{
 			path: '/recursos/:id',
 			name: 'Resources',
-			component: () => import('../views/ResourcesView/index.vue'),
+			component: () => import('../views/ResourcesView/index.js'),
 			meta: {
 				reload: true,
 				middleware: AuthMiddleware,
@@ -51,7 +51,7 @@ const router = createRouter({
 		{
 			path: '/docentes',
 			name: 'Docentes',
-			component: () => import('../views/TeachersView/index.vue'),
+			component: () => import('../views/TeachersView/index.js'),
 			meta: {
 				middleware: AuthMiddleware,
 			}
@@ -59,7 +59,7 @@ const router = createRouter({
 		{
 			path: '/contato',
 			name: 'Contato',
-			component: () => import('../views/ContactView/index.vue'),
+			component: () => import('../views/ContactView/index.js'),
 			meta: {
 				middleware: AuthMiddleware,
 			}
@@ -67,7 +67,7 @@ const router = createRouter({
 		{
 			path: '/perfil',
 			name: 'Perfil',
-			component: () => import('../views/ProfileView/index.vue'),
+			component: () => import('../views/ProfileView/index.js'),
 			meta: {
 				middleware: AuthMiddleware,
 			}
@@ -75,7 +75,7 @@ const router = createRouter({
 		{
 			path: '/:pathMatch(.*)*',
 			name: 'PageNotFound',
-			component: () => import('../views/PageNotFound/index.vue'),
+			component: () => import('../views/PageNotFound/index.js'),
 		}
 	]
 })
