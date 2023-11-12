@@ -6,6 +6,13 @@
 			em Sistemas de Informação (BSI)</p>
 	</header>
 </template>
+<script setup>
+
+import { ref } from 'vue'
+	defineProps({
+		title: String
+	})
+</script>
 
 <script>
 export default {

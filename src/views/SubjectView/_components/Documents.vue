@@ -1,5 +1,4 @@
 <template>
-
 	<div class="container">
 		<div class="s-documents--ufu" v-for="documento in documentos" :key="documento.id">
 			<stretched-card

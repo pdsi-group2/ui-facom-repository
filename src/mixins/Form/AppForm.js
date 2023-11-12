@@ -101,6 +101,7 @@ export default {
         },
 		onSubmit() {
             this.submiting = true;
+			console.log(this.action);
             api.post(this.action, this.getPostData())
                 .then(response => {
                     this.onSuccess(response.data)
