@@ -8,7 +8,8 @@
     "dev": "vite",
     "format": "prettier --write src/",
     "preview": "vite preview",
-    "test": "vitest --dom"
+    "test": "vitest --dom",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -41,6 +42,7 @@
     "@babel/preset-env": "^7.23.3",
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/coverage-istanbul": "^0.34.6",
     "@vue/cli-plugin-pwa": "~5.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/test-utils": "^2.4.1",
