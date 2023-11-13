@@ -1,7 +1,6 @@
 import { mount } from '@vue/test-utils'
 import LoginBanner from "../_components/LoginBanner.vue"
 import LoginTitle from "../_components/LoginTitle.vue"
-//import LoginForm from "../_components/LoginForm.vue"
 
 describe('LoginBanner', () => {
 	it('Renderiza a imagem nuvem de dados no Login', () => {
@@ -17,10 +16,4 @@ describe('LoginTitle', () => {
 	})
 })
 
-/*describe('LoginForm', () => {
-	it('Imprime o formulário do Login', () => {
-		const wrapper = mount(LoginForm)
-		console.log(wrapper.html())
-	})
-})*/
 
