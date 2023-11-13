@@ -1,43 +1,37 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 
-import './assets/main.css'
-import "../node_modules/bootstrap/dist/css/bootstrap.css"
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
+import Notifications from '@kyvg/vue3-notification';
+import VueCookies from 'vue-cookies';
+import VueTheMask from 'vue-the-mask';
 
-/* import the fontawesome core */
-import { library } from '@fortawesome/fontawesome-svg-core'
+import App from '@/App.vue';
+import router from '@/router';
 
-/* import font awesome icon component */
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { initFontawesome } from '@/fontawesome';
+import { directiveConfig } from '@/directives';
 
-/* import specific icons */
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
-import { faPersonThroughWindow } from '@fortawesome/free-solid-svg-icons'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-import { faCloudArrowUp } from '@fortawesome/free-solid-svg-icons'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import '@/jquery';
+import '@/ajax';
+import '@/bootstrap';
+import '@/registerServiceWorker';
 
-/* add icons to the library */
-library.add(faArrowRight)
-library.add(faArrowLeft)
-library.add(faCircleUser)
-library.add(faDownload)
-library.add(faLink)
-library.add(faPersonThroughWindow)
-library.add(faCloudArrowUp)
-library.add(faSpinner)
-const app = createApp(App)
+const pinia = createPinia();
+const app = createApp(App);
 
-app.component('font-awesome-icon', FontAwesomeIcon)
+initFontawesome(app);
 
-app.use(router)
+// app.config.globalProperties.$baseUrl = import.meta.env.VITE_API_URL;
 
-app.mount('#app')
+app.use(router);
+app.use(pinia);
+app.use(VueCookies, { expires: '1d'});
+app.use(Notifications);
+app.use(VueTheMask);
+
+directiveConfig(app);
+
+app.mount('#app');
 
 
   
