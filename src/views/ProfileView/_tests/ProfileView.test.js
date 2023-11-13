@@ -6,4 +6,7 @@ describe('ProfilePencil', () => {
 		const wrapper = mount(ProfilePencil)
 		//console.log(wrapper.html())
 	})
+	it("testing ProfilePencil component name", async () => {
+		expect(typeof ProfilePencil.name).toBe("string");
+	});
 })

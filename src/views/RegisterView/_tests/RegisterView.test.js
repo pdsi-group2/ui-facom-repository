@@ -6,4 +6,7 @@ describe('RegisterTitle', () => {
 		const wrapper = mount(RegisterTitle)
 		//console.log(wrapper.html())
 	})
+	it("testing RegisterTitle component name", async () => {
+		expect(typeof RegisterTitle.name).toBe("string");
+	});
 })

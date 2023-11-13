@@ -6,6 +6,9 @@ describe('PageNotFound', () => {
 		const wrapper = mount(PageNotFound)
 		//console.log(wrapper.html())
 	})
+	it("testing PageNotFound component name", async () => {
+		expect(typeof PageNotFound.name).toBe("string");
+	});
 })
 
 

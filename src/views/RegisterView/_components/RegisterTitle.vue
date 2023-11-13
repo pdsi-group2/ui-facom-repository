@@ -6,6 +6,12 @@
 	</header>
 </template>
 
+<script>
+export default {
+	name: 'RegisterTitle',
+}
+</script>
+
 <style>
 	.form-titulo{
 		color: white;
