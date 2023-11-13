@@ -9,4 +9,6 @@ describe('RegisterTitle', () => {
 	it("testing RegisterTitle component name", async () => {
 		expect(typeof RegisterTitle.name).toBe("string");
 	});
+	it("testing RegisterTitle component props", async () => {
+		expect(RegisterTitle.props.title)});
 })

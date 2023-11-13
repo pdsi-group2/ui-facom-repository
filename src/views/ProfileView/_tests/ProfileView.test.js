@@ -9,4 +9,6 @@ describe('ProfilePencil', () => {
 	it("testing ProfilePencil component name", async () => {
 		expect(typeof ProfilePencil.name).toBe("string");
 	});
+	it("testing ProfilePencil component props", async () => {
+		expect(ProfilePencil.props.title)});
 })
